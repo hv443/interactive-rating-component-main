@@ -75,6 +75,8 @@ button:hover{
     justify-content: space-between;
 
     transition: .4s;
+
+    box-shadow: inset -20px -20px 50px 0px hsla(216, 12%, 8%, 0.457);
 }
 
 .front-card img {
@@ -90,7 +92,6 @@ button:hover{
     text-align: center;
     gap: 1rem;
     cursor: pointer;
-    
 }
 .front-card ul li{
     padding: 1rem;
@@ -133,5 +134,6 @@ button:hover{
     background-color: hsl(213, 19%, 24%);
     color:hsl(217, 12%, 63%);
 }
+
 
 
