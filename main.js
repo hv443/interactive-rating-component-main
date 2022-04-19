@@ -42,22 +42,20 @@ rating.forEach(element => {
 submit.addEventListener('click',()=>{
  
        
-    // frontCard.style.display = 'none'
-    // thanksCard.style.display = 'flex'
+    frontCard.style.display = 'none'
+    thanksCard.style.display = 'flex'
     
-    frontCard.style.scale = '0'
-    thanksCard.style.scale = '1'
-    
+
 
 })
 
 
 back.addEventListener('click',()=>{
   
-    // frontCard.style.display = 'flex'
-    // thanksCard.style.display = 'none'
-    frontCard.style.scale = '1'
-    thanksCard.style.scale = '0'
+    frontCard.style.display = 'flex'
+    thanksCard.style.display = 'none'
+    // frontCard.style.scale = '1'
+    // thanksCard.style.scale = '0'
 
 })
 
