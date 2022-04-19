@@ -6,11 +6,15 @@
 }
 
 
-.co{
-    background-color: rgb(38, 27, 193);
-    color: pink;
-   
+
+.move{
+    position: absolute;
+    scale: 0;
+    right: 0px;
+    transform: translateX(500px);
 }
+
+
 
 body {
     width: 100%;
@@ -30,6 +34,7 @@ h1 {
     font-size: 28px;
     color: white;
     font-weight: 500;
+    margin-bottom: 1rem;
 }
 
 p {
@@ -48,6 +53,7 @@ button {
     font-weight: 600;
     letter-spacing: 2px;
     transition: .3s;
+    cursor: pointer;
 }
 
 button:hover{
@@ -55,81 +61,83 @@ button:hover{
     color:hsl(25, 97%, 53%) ;
 }
 
-.front-card,
-.thanks-card {
-    max-width: 350px;
+.cards{
+    width: 375px;
     height: 400px;
-    display: grid;
-    place-content: center;
+    position: relative;
+}
+
+.front-card,
+.thanks-card{
+    position: absolute;
+    width: 375px;
+    height: 400px;
     background-color: hsl(213, 19%, 18%);
     padding: 1.5rem;
     border-radius: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transition: .4s;
 }
 
-.front-card .card-star img {
-    border-radius: 50%;
-    background-color: hsl(213, 19%, 24%);
-    padding: .8rem;
-    margin-bottom: 1.5rem;
+.front-card img {
+   background-color:hsl(213, 19%, 25%) ;
+   border-radius: 50%;
+   padding: 1rem;
 }
 
-.front-card .card-title,
-.card-para {
-    margin-bottom: 1rem;
-}
 
-.card-ratings {
+.front-card ul{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5,1fr);
     text-align: center;
     gap: 1rem;
-    margin-bottom: 1.5rem;
-    color: hsl(217, 12%, 63%);
-    cursor: pointer;
+    
 }
-
-.card-ratings .rating-numbers {
-    background-color: hsl(213, 19%, 24%);
-    padding: .8rem;
+.front-card ul li{
+    padding: 1rem;
     border-radius: 50%;
-    transition:  .3s;
+    transition: .3s;
+    /* color:  hsl(217, 12%, 63%);; */
 }
-.rating-numbers:hover{
-    background-color:  hsl(25, 97%, 53%);
+.front-card ul li:hover{
+    background-color:hsl(25, 97%, 53%);
     color: white;
 }
 
-.thanks-card {
+
+
+.thanks-card{
+   text-align: center;
+
+}
+
+.rating-review{
     display: grid;
-    display: none;
-    place-items: center;
-    text-align: center;
-    padding: 2.5rem 1.5rem;
+    place-content: center;
 }
 
-.thanks-image,
-.rating-review {
-    margin-bottom: 1.5rem
-}
-
-.rating-review .rate-text {
+.thanks-card .rate-text{
+    background-color: hsl(213, 19%, 25%);
     color: hsl(25, 97%, 53%);
-    background-color: hsl(213, 19%, 24%);
-    padding: .2rem 1.5rem;
     border-radius: 1rem;
-}
-
-
-.thanks-card h1,
-.thanks-card p {
-    margin-bottom: .5rem;
+    padding: .2rem 1rem;
+    width: max-content;
 }
 
 
 
-.display {
-    display: none;
-}
 
+.color{
+    background-color: grey;
+    color:white;
+}
+.initial-color{
+    background-color: hsl(213, 19%, 24%);
+    color:hsl(217, 12%, 63%);
+}
 
 

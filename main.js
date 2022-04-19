@@ -9,7 +9,7 @@ const thanksCard = document.querySelector(".thanks-card")
 const rating = document.querySelectorAll(".rating-numbers")
 
 
-// const  = document.querySelector(".card-ratings")
+
 
 let val;
 
@@ -19,16 +19,17 @@ rating.forEach(element => {
         
     rating.forEach(rated=>{
             if(e.target.innerHTML == rated.innerHTML){
-        rated.style.backgroundColor="grey"
-        rated.style.color="white"
-        // console.log(rated.innerHTML)
+        rated.classList.add('color')
+        rated.classList.remove('initial-color')
         let val = rated.innerHTML
         rate.innerHTML = val
 
         }
+
         else{
-            rated.style.backgroundColor="hsl(213, 19%, 24%)"
-            rated.style.color="hsl(217, 12%, 63%)"
+          
+            rated.classList.remove('color')
+            rated.classList.add('initial-color')
         }
         })
     })
@@ -38,26 +39,27 @@ rating.forEach(element => {
 
 
 
-
-
-
-
-
 submit.addEventListener('click',()=>{
  
        
-        frontCard.style.display = 'none'
-        thanksCard.style.display = 'block'
+    // frontCard.style.display = 'none'
+    // thanksCard.style.display = 'flex'
+    
+    frontCard.style.scale = '0'
+    thanksCard.style.scale = '1'
+    
 
 })
 
 
 back.addEventListener('click',()=>{
   
-    frontCard.style.display = 'block'
-    thanksCard.style.display = 'none'
-  
-  
+    // frontCard.style.display = 'flex'
+    // thanksCard.style.display = 'none'
+    frontCard.style.scale = '1'
+    thanksCard.style.scale = '0'
+
 })
+
 
 
