@@ -43,8 +43,8 @@ submit.addEventListener('click',()=>{
  
        
     frontCard.style.display = 'none'
-    thanksCard.style.display = 'flex'
-    
+    // thanksCard.style.display = 'flex'
+    thanksCard.classList.add('display')
 
 
 })
@@ -53,7 +53,7 @@ submit.addEventListener('click',()=>{
 back.addEventListener('click',()=>{
   
     frontCard.style.display = 'flex'
-    thanksCard.style.display = 'none'
+    thanksCard.classList.remove('display')
     // frontCard.style.scale = '1'
     // thanksCard.style.scale = '0'
 
